@@ -7,6 +7,7 @@ module.exports = {
 		fontFamily: {
 			header: ["Raleway", "sans-serif"],
 			body: ["Open Sans", "sans-serif"],
+			mono: ['Raleway', 'SFMono-Regular'],
 		},
 
 		screens: {
@@ -22,6 +23,7 @@ module.exports = {
 			black: "#000000",
 			yellow: "#f9e71c",
 			lila: "#e6e5ec",
+			red: "#5f072f",
 			"grey-10": "#6c6b6d",
 			"grey-20": "#7c7c7c",
 			"grey-30": "#919091",
