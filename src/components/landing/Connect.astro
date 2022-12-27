@@ -1,0 +1,40 @@
+---
+export interface Props {
+    color: "text-white" | "text-primary";
+}
+const { color, defaultClasses = "bx text-2xl hover:text-yellow" } = Astro.props;
+---
+
+<a>
+    <i class:list={[defaultClasses, "bxl-github", color]}></i>
+</a>
+
+<a onclick="mailToClipboard()" class="pl-4">
+    <i class:list={[defaultClasses, "bx-envelope", color]}></i>
+</a>
+
+<a href="/" class="pl-4">
+    <i class:list={[defaultClasses, "bxl-twitter", color]}></i>
+</a>
+<a href="/" class="pl-4">
+    <i class:list={[defaultClasses, "bxl-linkedin", color]}></i>
+</a>
+<a href="/" class="pl-4">
+    <i class:list={[defaultClasses, "bxl-instagram", color]}></i>
+</a>
+
+<script type="text/javascript">
+    function decode(a) {
+        return a.replace(/[a-zA-Z]/g, function (c) {
+            return String.fromCharCode(
+                (c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
+            );
+        });
+    }
+    async function mailToClipboard() {
+        var y = decode("qnavry.frvqyre@tznvy.pbz");
+        await navigator.clipboard.writeText(y);
+        var x = document.getElementById("tooltip-email");
+        x.style.display = "block";
+    }
+</script>

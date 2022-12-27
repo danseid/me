@@ -1,0 +1,67 @@
+---
+import { BASE_URL } from "../../config";
+import Connect from "./Connect.astro";
+
+const meImage = BASE_URL + "me.jpg";
+const hero_bg = "background-image: url(" + BASE_URL + "hero_bg.jpg" + ")";
+---
+
+<div class="relative bg-cover bg-center bg-no-repeat py-8" style={hero_bg}>
+    <div
+        class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to opacity-95 bg-cover bg-center bg-no-repeat"
+    >
+    </div>
+
+    <div class="container relative z-30 pt-20 pb-12">
+        <div
+            class="lg:grid lg:grid-flow-col lg:auto-cols-max flex flex-col items-center flex-wrap gap-4"
+        >
+            <img
+                src={meImage}
+                class="h-48 w-48 rounded-full border-8 border-primary"
+                alt="Daniel Seidler"
+            />
+            <div
+                class="lg:self-end lg:col-start-2 lg:col-end-2 lg:row-start-2 self-center"
+            >
+                <h1
+                    class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
+                >
+                    <span>Hello I'm</span>
+                    <span id="whoami"></span>
+                </h1>
+                <div
+                    class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
+                >
+                    <div
+                        class="flex items-center justify-center pl-0 sm:justify-start md:pl-1"
+                    >
+                        <p class="font-body text-lg uppercase text-white">
+                            Let's connect
+                        </p>
+                        <div class="hidden sm:block">
+                            <i class="bx bx-chevron-right text-3xl text-yellow"
+                            ></i>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0"
+                    >
+                        <Connect color={"text-white"} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    import Typed, { TypedOptions } from "typed.js";
+    const options: TypedOptions = {
+        strings: ["A Full Stack Developer.", "Daniel Seidler."],
+        typeSpeed: 50,
+        startDelay: 1000,
+        backSpeed: 30,
+    };
+    new Typed("#whoami", options);
+</script>

@@ -1,0 +1,61 @@
+---
+import WorkExperienceEntry from "./WorkExperienceEntry.astro";
+---
+
+<div class="container py-16 md:py-20" id="work">
+    <h2
+        class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+    >
+        My work experience
+    </h2>
+    <h3
+        class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+    >
+        Here's what I did before freelancing
+    </h3>
+
+    <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
+        <span
+            class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"
+        ></span>
+        <WorkExperienceEntry
+            date="2016 - now"
+            title="Senior Full Stack Engineer"
+            logo="markant.png"
+            span="6 years"
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.
+        </WorkExperienceEntry>
+        <WorkExperienceEntry
+            date="2011 -  2016"
+            title="Senior Software Engineer"
+            logo="metro.png"
+            span="5 years"
+
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.
+        </WorkExperienceEntry>
+        <WorkExperienceEntry
+            date="2008 - 2010"
+            title="Software Engineer"
+            logo="oio.png"
+            span="2 years"
+
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.
+        </WorkExperienceEntry>
+        <WorkExperienceEntry
+            date="2007"
+            title="Junior Software Engineer"
+            logo="lufthansa.png"
+            span="1 year"
+
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim.
+        </WorkExperienceEntry>
+    </div>
+</div>
